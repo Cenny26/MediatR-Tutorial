@@ -4,10 +4,10 @@ internal class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
-        // Custom services
-        builder.Services.AddMediatR(conf =>
+        // Add custom services
+        builder.Services.AddMediatR(config =>
         {
-            conf.RegisterServicesFromAssemblyContaining<Program>();
+            config.RegisterServicesFromAssemblyContaining<Program>();
         });
 
         // Add services to the container.
